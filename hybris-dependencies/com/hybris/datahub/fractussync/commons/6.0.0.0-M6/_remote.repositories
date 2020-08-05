@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 02 10:46:08 CET 2016
+commons-6.0.0.0-M6.jar>=
+commons-6.0.0.0-M6-tests.jar>=
+commons-6.0.0.0-M6.pom>=

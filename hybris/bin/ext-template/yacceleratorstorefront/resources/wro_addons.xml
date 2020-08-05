@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<groups xmlns="http://www.isdc.ro/wro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
+   <group name="addons_responsive">
+      <css>/_ui/addons/liveeditaddon/responsive/common/css/liveeditaddon.css</css>
+   </group>
+   <group name="addons_desktop">
+      <css>/_ui/addons/liveeditaddon/desktop/common/css/liveeditaddon.css</css>
+   </group>
+   <group name="addons_mobile">
+      <css>/_ui/addons/liveeditaddon/mobile/common/css/liveeditaddon.css</css>
+   </group>
+</groups>
+

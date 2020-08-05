@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widgets.xsd">
+
+    <widget-extension widgetId="backofficeMainSlot">
+        <widget id="bookstorebackoffice-perspective" widgetDefinitionId="my.bookstore.widgets.bookstorebackofficewidget"
+            template="false" slotId="perspectives" title="Hello bookstorebackoffice">
+            <setting key="perspectiveImageUrl" value="/cng/images/perspective.png"
+                type="String" />
+        </widget>
+    </widget-extension>
+
+    <widget-connection sourceWidgetId="bookstorebackoffice-explorer-tree" outputId="nodeSelected" targetWidgetId="bookstorebackoffice-tree-node-adapter" inputId="input"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-tree-node-adapter" outputId="true" targetWidgetId="bookstorebackoffice-typecode-extractor" inputId="genericInput"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-tree-node-adapter" outputId="true" targetWidgetId="bookstorebackoffice-search-enabler" inputId="genericInput"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-tree-node-adapter" outputId="false" targetWidgetId="bookstorebackoffice-search-disabler" inputId="genericInput"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-typecode-extractor" outputId="genericOutput" targetWidgetId="bookstorebackoffice-search-logic" inputId="type"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-search-enabler" outputId="genericOutput" targetWidgetId="bookstorebackoffice-text-search" inputId="enabled"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-search-disabler" outputId="genericOutput" targetWidgetId="bookstorebackoffice-text-search" inputId="enabled"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-text-search" outputId="query" targetWidgetId="bookstorebackoffice-search-logic" inputId="searchtext"/>
+    <widget-connection sourceWidgetId="bookstorebackoffice-search-logic" outputId="pageable" targetWidgetId="bookstorebackoffice-simple-list" inputId="pageable"/>
+
+</widgets>

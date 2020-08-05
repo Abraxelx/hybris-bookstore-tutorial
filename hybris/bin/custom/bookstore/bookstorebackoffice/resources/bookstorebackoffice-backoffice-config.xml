@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~ All rights reserved.
+  ~
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  -->
+
+<config xmlns="http://www.hybris.com/cockpit/config">
+
+	<!-- bookstorebackoffice UI configuration should be provided here -->
+
+	<!--<context component="component-code" module="bookstorebackoffice">-->
+		<!--Please check documentation for code snippets for specific components-->
+	<!--</context>-->
+
+	<context type="Book" component="create-wizard" merge-by="type" parent="GenericItem">
+		<wz:flow xmlns:wz="http://www.hybris.com/cockpitng/config/wizard-config" id="bookWizard" title="create.book.title">
+			<wz:prepare id="bookProduct">
+				<wz:initialize property="book" type="Book"/>
+			</wz:prepare>
+			<wz:step id="step1" label="create.book.label" sublabel="create.book.sublabel">
+				<wz:content id="step1.content">
+					<wz:property-list root="book">
+						<wz:property qualifier="code"/>
+						<wz:property qualifier="language"/>
+						<wz:property qualifier="ISBN10"/>
+						<wz:property qualifier="ISBN13"/>
+						<wz:property qualifier="publisher"/>
+						<wz:property qualifier="publishedDate"/>
+						<wz:property qualifier="rentable"/>
+						<wz:property qualifier="rewardPoints"/>
+						<wz:property qualifier="edition"/>
+						<wz:property qualifier="publication"/>
+						<wz:property qualifier="approvalStatus"/>
+						<wz:property qualifier="catalogVersion"/>
+					</wz:property-list>
+				</wz:content>
+				<wz:navigation id="step1.navigation">
+					<wz:cancel/>
+					<wz:done >
+						<wz:save property="book"/>
+					</wz:done>
+				</wz:navigation>
+			</wz:step>
+		</wz:flow>
+	</context>
+
+
+
+</config>

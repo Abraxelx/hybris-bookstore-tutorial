@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ [y] hybris Platform
+  ~
+  ~ Copyright (c) 2000-2015 hybris AG
+  ~
+  ~ All rights reserved.
+  ~ This software is the confidential and proprietary information of hybris
+  ~ ("Confidential Information"). You shall not disclose such Confidential
+  ~ Information and shall use it only in accordance with the terms of the
+  ~ license agreement you entered into with hybris.
+  ~
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.hybris.datahub</groupId>
+		<artifactId>datahub-parent</artifactId>
+		<version>6.0.0.0-M7</version>
+	</parent>
+
+	<artifactId>datahub</artifactId>
+	<packaging>pom</packaging>
+	<name>datahub</name>
+
+	<modules>
+		<module>datahub-entity</module>
+		<module>datahub-service</module>
+		<module>datahub-service-akka</module>
+		<module>datahub-extension-loader</module>
+		<module>datahub-facade</module>
+		<module>datahub-test-config</module>
+		<module>datahub-webapp</module>
+		<module>datahub-feature-test</module>
+		<module>datahub-persistence-jpa</module>
+		<module>datahub-batch</module>
+	</modules>
+
+	<properties>
+		<hybris.kernel.version>5.7.0.0-RC8</hybris.kernel.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.hybris.kernel</groupId>
+					<artifactId>init-app-maven-plugin</artifactId>
+					<version>${hybris.kernel.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.hybris.kernel</groupId>
+					<artifactId>kernel-type-system-maven-plugin</artifactId>
+					<version>${hybris.kernel.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.mysema.maven</groupId>
+					<artifactId>maven-apt-plugin</artifactId>
+					<version>1.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- kernel dependencies - should be known only to Data Hub implementation (modules declared above) -->
+			<dependency>
+				<groupId>com.hybris.kernel</groupId>
+				<artifactId>kernel-api</artifactId>
+				<version>${hybris.kernel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.kernel</groupId>
+				<artifactId>kernel-service</artifactId>
+				<version>${hybris.kernel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.kernel</groupId>
+				<artifactId>jdbc-engine</artifactId>
+				<version>${hybris.kernel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.kernel</groupId>
+				<artifactId>kernel-media</artifactId>
+				<version>${hybris.kernel.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.kernel</groupId>
+				<artifactId>kernel-media-jdbc</artifactId>
+				<version>${hybris.kernel.version}</version>
+			</dependency>
+
+			<!-- Data Hub dependencies, visible within the datahub project itself. -->
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-entity</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-rest-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-service-akka</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-extension-loader</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-test-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- former kernel & commons framework dependencies -->
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-persistence-jpa</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.hybris.datahub</groupId>
+				<artifactId>datahub-service</artifactId>
+				<version>${project.version}</version>
+				<type>test-jar</type>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+								<configuration>
+									<additionalparam>-Xdoclint:none</additionalparam>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

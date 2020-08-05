@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.hybris.datahub.c4c</groupId>
+  <artifactId>c4c-endpoint-mock</artifactId>
+  <versioning>
+    <release>6.0.0.0-M4</release>
+    <versions>
+      <version>6.0.0.0-M4</version>
+    </versions>
+    <lastUpdated>20160129071948</lastUpdated>
+  </versioning>
+</metadata>

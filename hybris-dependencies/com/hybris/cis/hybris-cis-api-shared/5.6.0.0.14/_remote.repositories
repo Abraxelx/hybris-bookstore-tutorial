@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jun 08 08:26:37 UTC 2015
+hybris-cis-api-shared-5.6.0.0.14.pom>=
+hybris-cis-api-shared-5.6.0.0.14-tests.jar>=
+hybris-cis-api-shared-5.6.0.0.14-sources.jar>=
+hybris-cis-api-shared-5.6.0.0.14.jar>=

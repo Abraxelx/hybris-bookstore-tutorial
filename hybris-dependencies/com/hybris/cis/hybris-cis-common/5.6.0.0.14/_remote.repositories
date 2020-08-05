@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Mon Jun 08 08:26:44 UTC 2015
+hybris-cis-common-5.6.0.0.14.pom>=
+hybris-cis-common-5.6.0.0.14-tests.jar>=
+hybris-cis-common-5.6.0.0.14.jar>=

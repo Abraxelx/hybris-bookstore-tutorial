@@ -1,0 +1,35 @@
+2020-07-28 15:00:05.840 INFO  (main) [   ] o.e.j.u.log Logging initialized @328ms
+2020-07-28 15:00:06.052 INFO  (main) [   ] o.e.j.s.Server jetty-9.2.11.v20150529
+2020-07-28 15:00:06.066 WARN  (main) [   ] o.e.j.s.h.RequestLogHandler !RequestLog
+2020-07-28 15:00:06.068 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:/C:/Users/pc/Desktop/LastTest/workspace/hybris/bin/ext-commerce/solrserver/resources/solr/server/contexts/] at interval 0
+2020-07-28 15:00:06.721 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2020-07-28 15:00:06.729 WARN  (main) [   ] o.e.j.s.SecurityHandler ServletContext@o.e.j.w.WebAppContext@6093dd95{/solr,file:/C:/Users/pc/Desktop/LastTest/workspace/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,STARTING}{C:\Users\pc\Desktop\LastTest\workspace\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp} has uncovered http methods for path: /
+2020-07-28 15:00:06.734 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter SolrDispatchFilter.init(): WebAppClassLoader=1597249648@5f341870
+2020-07-28 15:00:06.745 INFO  (main) [   ] o.a.s.c.SolrResourceLoader JNDI not configured for solr (NoInitialContextEx)
+2020-07-28 15:00:06.745 INFO  (main) [   ] o.a.s.c.SolrResourceLoader using system property solr.solr.home: C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default
+2020-07-28 15:00:06.747 INFO  (main) [   ] o.a.s.c.SolrResourceLoader new SolrResourceLoader for directory: 'C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default\'
+2020-07-28 15:00:06.843 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default\solr.xml
+2020-07-28 15:00:06.886 INFO  (main) [   ] o.a.s.c.CoresLocator Config-defined core root directory: C:\Users\pc\Desktop\LastTest\workspace\hybris\data\solr\instances\default\cores
+2020-07-28 15:00:06.902 INFO  (main) [   ] o.a.s.c.CoreContainer New CoreContainer 1939990953
+2020-07-28 15:00:06.902 INFO  (main) [   ] o.a.s.c.CoreContainer Loading cores into CoreContainer [instanceDir=C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default\]
+2020-07-28 15:00:06.902 INFO  (main) [   ] o.a.s.c.CoreContainer loading shared library: C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default\lib
+2020-07-28 15:00:06.902 WARN  (main) [   ] o.a.s.c.SolrResourceLoader Can't find (or read) directory to add to classloader: lib (resolved as: C:\Users\pc\Desktop\LastTest\workspace\hybris\config\solr\instances\default\lib).
+2020-07-28 15:00:06.914 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory created with socketTimeout : 600000,connTimeout : 60000,maxConnectionsPerHost : 20,maxConnections : 10000,corePoolSize : 0,maximumPoolSize : 2147483647,maxThreadIdleTime : 5,sizeOfQueue : -1,fairnessPolicy : false,useRetries : false,
+2020-07-28 15:00:07.246 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2020-07-28 15:00:07.247 INFO  (main) [   ] o.a.s.l.LogWatcher SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+2020-07-28 15:00:07.248 INFO  (main) [   ] o.a.s.l.LogWatcher Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+2020-07-28 15:00:07.249 INFO  (main) [   ] o.a.s.c.CoreContainer Security conf doesn't exist. Skipping setup for authorization module.
+2020-07-28 15:00:07.249 INFO  (main) [   ] o.a.s.c.CoreContainer No authentication plugin used.
+2020-07-28 15:00:07.273 INFO  (main) [   ] o.a.s.c.CoresLocator Looking for core definitions underneath C:\Users\pc\Desktop\LastTest\workspace\hybris\data\solr\instances\default\cores
+2020-07-28 15:00:07.273 INFO  (main) [   ] o.a.s.c.CoresLocator Found 0 core definitions
+2020-07-28 15:00:07.275 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter user.dir=C:\Users\pc\Desktop\LastTest\workspace\hybris\bin\ext-commerce\solrserver\resources\solr\server
+2020-07-28 15:00:07.275 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter SolrDispatchFilter.init() done
+2020-07-28 15:00:07.283 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@6093dd95{/solr,file:/C:/Users/pc/Desktop/LastTest/workspace/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,AVAILABLE}{C:\Users\pc\Desktop\LastTest\workspace\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp}
+2020-07-28 15:00:07.294 INFO  (main) [   ] o.e.j.s.ServerConnector Started ServerConnector@1f760b47{HTTP/1.1}{0.0.0.0:8983}
+2020-07-28 15:00:07.294 INFO  (main) [   ] o.e.j.s.Server Started @1784ms
+2020-07-28 15:00:07.717 INFO  (qtp1476011703-20) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=31 
+2020-07-28 15:00:13.747 INFO  (qtp1476011703-23) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=0 
+2020-07-28 15:03:58.014 INFO  (qtp1476011703-20) [   ] o.a.s.s.SolrDispatchFilter [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=0 
+2020-07-28 15:03:58.518 INFO  (ShutdownMonitor) [   ] o.e.j.s.ServerConnector Stopped ServerConnector@1f760b47{HTTP/1.1}{0.0.0.0:8983}
+2020-07-28 15:03:58.519 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1939990953
+2020-07-28 15:03:58.520 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@6093dd95{/solr,file:/C:/Users/pc/Desktop/LastTest/workspace/hybris/bin/ext-commerce/solrserver/resources/solr/server/solr-webapp/webapp/,UNAVAILABLE}{C:\Users\pc\Desktop\LastTest\workspace\hybris\bin\ext-commerce\solrserver\resources\solr\server/solr-webapp/webapp}
